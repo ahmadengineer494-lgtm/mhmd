@@ -4,8 +4,8 @@
         "title": "دهانات داخلية عصرية - صالات ومجالس",
         "category": "دهانات داخلية",
         "type": "image",
-        "media": "assets/works/عمل-دهانات-داخلية-1.jpg",
-        "thumbnail": "assets/works/عمل-دهانات-داخلية-1.jpg",
+        "media": "assets/works/work-interior-1.jpg",
+        "thumbnail": "assets/works/work-interior-1.jpg",
         "description": "تنفيذ أحدث ألوان وتدرجات الدهانات الداخلية بأعلى دقة واحترافية"
     },
     {
@@ -13,8 +13,8 @@
         "title": "ديكورات أسقف وجبس بورد فخمة",
         "category": "ديكورات جبس",
         "type": "image",
-        "media": "assets/works/عمل-ديكورات-جبس-1.jpg",
-        "thumbnail": "assets/works/عمل-ديكورات-جبس-1.jpg",
+        "media": "assets/works/work-gypsum-1.jpg",
+        "thumbnail": "assets/works/work-gypsum-1.jpg",
         "description": "تصميم وتنفيذ ديكورات جبس بورد مع مسارات إضاءة مخفية أنيقة"
     },
     {
@@ -22,8 +22,8 @@
         "title": "تشطيبات متكاملة ودهانات وديكور",
         "category": "تشطيبات كاملة",
         "type": "image",
-        "media": "assets/works/عمل-تشطيبات-كاملة-1.jpg",
-        "thumbnail": "assets/works/عمل-تشطيبات-كاملة-1.jpg",
+        "media": "assets/works/work-finishing-1.jpg",
+        "thumbnail": "assets/works/work-finishing-1.jpg",
         "description": "تشطيب نهائي متناسق يجمع بين فخامة الجبس ونعومة الدهان"
     },
     {
@@ -31,8 +31,8 @@
         "title": "جولة تشطيب صالة ومجلس رئيسي",
         "category": "تشطيبات كاملة",
         "type": "video",
-        "media": "assets/works/فيديو-عمل-1.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-1-thumb.jpg",
+        "media": "assets/works/video-1.mp4",
+        "thumbnail": "assets/works/thumbnails/video-1-thumb.jpg",
         "description": "إشراف وتنفيذ أعمال الدهان والديكور والإضاءة المخفية"
     },
     {
@@ -40,8 +40,8 @@
         "title": "تنفيذ ديكورات جبس بورد مضاءة",
         "category": "ديكورات جبس",
         "type": "video",
-        "media": "assets/works/فيديو-عمل-2.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-2-thumb.jpg",
+        "media": "assets/works/video-2.mp4",
+        "thumbnail": "assets/works/thumbnails/video-2-thumb.jpg",
         "description": "تركيب ألواح الجبس مع توزيع فتحات السبوت لايت والشريط المضيء"
     },
     {
@@ -49,8 +49,8 @@
         "title": "دهان جدران ناعم مطفي فاخر",
         "category": "دهانات داخلية",
         "type": "video",
-        "media": "assets/works/فيديو-عمل-3.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-3-thumb.jpg",
+        "media": "assets/works/video-3.mp4",
+        "thumbnail": "assets/works/thumbnails/video-3-thumb.jpg",
         "description": "طبقات دهان بجودة فائقة ونعومة متناهية بدون أي تموجات"
     },
     {
@@ -58,8 +58,8 @@
         "title": "تشطيب أسقف مستعارة فندقية",
         "category": "أسقف مستعارة",
         "type": "video",
-        "media": "assets/works/فيديو-عمل-4.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-4-thumb.jpg",
+        "media": "assets/works/video-4.mp4",
+        "thumbnail": "assets/works/thumbnails/video-4-thumb.jpg",
         "description": "تنفيذ هندسي دقيق لأسقف الغرف والممرات"
     },
     {
@@ -67,8 +67,8 @@
         "title": "تركيب وتنسيق بديل الرخام والجدران",
         "category": "بديل الرخام والخشب",
         "type": "video",
-        "media": "assets/works/فيديو-عمل-5.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-5-thumb.jpg",
+        "media": "assets/works/video-5.mp4",
+        "thumbnail": "assets/works/thumbnails/video-5-thumb.jpg",
         "description": "دمج بديل الرخام مع شرائح بديل الخشب لإضفاء طابع فخم"
     },
     {
@@ -76,8 +76,8 @@
         "title": "إتقان تفاصيل زوايا الجبس بورد",
         "category": "ديكورات جبس",
         "type": "video",
-        "media": "assets/works/فيديو-عمل-6.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-6-thumb.jpg",
+        "media": "assets/works/video-6.mp4",
+        "thumbnail": "assets/works/thumbnails/video-6-thumb.jpg",
         "description": "تنعيم ومعجنة الفواصل والزوايا باحترافية تامة"
     },
     {
@@ -85,8 +85,8 @@
         "title": "دهانات داخلية بألوان عصرية هادئة",
         "category": "دهانات داخلية",
         "type": "video",
-        "media": "assets/works/فيديو-عمل-7.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-7-thumb.jpg",
+        "media": "assets/works/video-7.mp4",
+        "thumbnail": "assets/works/thumbnails/video-7-thumb.jpg",
         "description": "تناسق ألوان أوف وايت ودرجات البيج المريحة للعين"
     },
     {
@@ -94,8 +94,8 @@
         "title": "تشطيب نهائي لفيلا في جيزان",
         "category": "تشطيبات كاملة",
         "type": "video",
-        "media": "assets/works/فيديو-عمل-8.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-8-thumb.jpg",
+        "media": "assets/works/video-8.mp4",
+        "thumbnail": "assets/works/thumbnails/video-8-thumb.jpg",
         "description": "تسليم كامل للموقع بجودة عالية وفق رغبة العميل"
     },
     {
@@ -103,8 +103,8 @@
         "title": "أعمال دهان ديكوري ولمسات جمالية",
         "category": "دهانات داخلية",
         "type": "video",
-        "media": "assets/works/فيديو-عمل-9.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-9-thumb.jpg",
+        "media": "assets/works/video-9.mp4",
+        "thumbnail": "assets/works/thumbnails/video-9-thumb.jpg",
         "description": "تطبيق مؤثرات دهان فنية على الجدران المميزة"
     },
     {
@@ -112,8 +112,8 @@
         "title": "تصميم وتركيب شاشة تلفزيون بديل خشب",
         "category": "بديل الرخام والخشب",
         "type": "video",
-        "media": "assets/works/فيديو-عمل-10.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-10-thumb.jpg",
+        "media": "assets/works/video-10.mp4",
+        "thumbnail": "assets/works/thumbnails/video-10-thumb.jpg",
         "description": "خلفيات شاشة عصرية مدمجة بإضاءة ليد مخفية"
     },
     {
@@ -121,8 +121,8 @@
         "title": "تنفيذ أسقف جبسية كلاسيكية وحديثة",
         "category": "ديكورات جبس",
         "type": "video",
-        "media": "assets/works/فيديو-عمل-11.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-11-thumb.jpg",
+        "media": "assets/works/video-11.mp4",
+        "thumbnail": "assets/works/thumbnails/video-11-thumb.jpg",
         "description": "تنوع في التشكيل الجبسي ليناسب كافة الأذواق"
     },
     {
@@ -130,8 +130,8 @@
         "title": "صنفرة ودهان أساس ومعجون ناعم",
         "category": "تشطيبات كاملة",
         "type": "video",
-        "media": "assets/works/فيديو-عمل-12.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-12-thumb.jpg",
+        "media": "assets/works/video-12.mp4",
+        "thumbnail": "assets/works/thumbnails/video-12-thumb.jpg",
         "description": "تأسيس هندسي سليم قبل دهان الطبقات النهائية"
     },
     {
@@ -139,8 +139,8 @@
         "title": "تشطيب ممرات ومداخل بديكور عصري",
         "category": "أسقف مستعارة",
         "type": "video",
-        "media": "assets/works/فيديو-عمل-13.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-13-thumb.jpg",
+        "media": "assets/works/video-13.mp4",
+        "thumbnail": "assets/works/thumbnails/video-13-thumb.jpg",
         "description": "توزيع إضاءة ذكي يعطي اتساعاً وفخامة للممر"
     },
     {
@@ -148,8 +148,8 @@
         "title": "نظرة شاملة على اكتمال أعمال الدهان",
         "category": "دهانات داخلية",
         "type": "video",
-        "media": "assets/works/فيديو-عمل-14.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-14-thumb.jpg",
+        "media": "assets/works/video-14.mp4",
+        "thumbnail": "assets/works/thumbnails/video-14-thumb.jpg",
         "description": "جاهزية المكان بعد إتمام جميع مراحل الصبغ والتلميع"
     }
 ]
