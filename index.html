@@ -70,6 +70,56 @@
 }
 </style>
 
+
+<style>
+.work-media {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+}
+.work-media .watermark {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    font-weight: 600;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+    pointer-events: none;
+    user-select: none;
+    z-index: 2;
+    background: rgba(0,0,0,0.3);
+    padding: 4px 10px;
+    border-radius: 8px;
+}
+@media (max-width: 768px) {
+    .work-media .watermark {
+        font-size: 11px;
+        padding: 3px 8px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.55);
+    border: none;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    z-index: 3;
+    transition: transform 0.2s;
+}
+.play-btn:hover { transform: translate(-50%, -50%) scale(1.1); }
+.play-btn svg { margin-left: 4px; }
+</style>
+
 </head>
 <body class="bg-[#FDF8F3] text-[#2B2118] font-sans antialiased">
 
@@ -301,8 +351,11 @@
                 <div class="text-xl font-black text-white mb-2">دهانات وديكور جيزان</div>
                 <p class="text-white/60 text-sm">متخصص دهانات والديكور وتشطيب في جيزان وضواحيها</p>
             </div>
-            <div class="text-white/60 text-sm">
-                جميع حقوق الطبع والنشر محفوظة © 2026
+            <div class="text-white/60 text-sm leading-relaxed">
+                © 2026 دهانات وديكور جيزان — جميع الحقوق محفوظة<br>
+                تصميم وتطوير: أحمد Y10<br>
+                جميع حقوق الطبع والنشر محفوظة<br>
+                لا يجوز نسخ أو إعادة نشر أي جزء من الموقع دون إذن كتابي مسبق
             </div>
         </div>
     </footer>
