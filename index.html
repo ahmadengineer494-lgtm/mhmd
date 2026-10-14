@@ -33,7 +33,21 @@
     <style>
         body { font-family: 'Tajawal', sans-serif; background-color: #FDF8F3; color: #2B2118; }
         .card-shadow { box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
-        .watermark {
+        .play-btn-pulse {
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+        .play-btn-pulse:hover {
+            transform: scale(1.1);
+            background: rgba(139, 94, 52, 0.95);
+        }
+
+        /* Work Media & Watermark */
+        .work-media {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+        }
+        .work-media .watermark, .watermark {
             position: absolute;
             bottom: 12px;
             right: 12px;
@@ -46,13 +60,14 @@
             z-index: 20;
             background: rgba(0,0,0,0.45);
             backdrop-filter: blur(4px);
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 8px;
+            letter-spacing: 0.3px;
         }
-        @media (max-width: 768px) {
-            .watermark {
+        @media (max-width: 640px) {
+            .work-media .watermark, .watermark {
                 font-size: 11px;
-                padding: 3px 8px;
+                padding: 4px 8px;
                 bottom: 8px;
                 right: 8px;
             }
@@ -73,13 +88,169 @@
             padding: 5px 12px;
             border-radius: 8px;
         }
-        .play-btn-pulse {
-            transition: transform 0.2s ease, background 0.2s ease;
+
+        /* Creator Badge (Fixed bottom-left) */
+        .creator-badge {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8B5E34 0%, #2B2118 100%);
+            color: #fff;
+            font-size: 28px;
+            font-weight: 900;
+            border: 2px solid rgba(255,255,255,0.25);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+            cursor: pointer;
+            z-index: 9999;
+            display: grid;
+            place-items: center;
+            font-family: 'Tajawal', sans-serif;
+            transition: transform 0.2s, box-shadow 0.2s;
+            animation: pulse-badge 3s infinite;
         }
-        .play-btn-pulse:hover {
-            transform: scale(1.1);
-            background: rgba(139, 94, 52, 0.95);
+        .creator-badge:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(139,94,52,0.5);
         }
+        @keyframes pulse-badge {
+            0%, 100% { box-shadow: 0 4px 20px rgba(0,0,0,0.35); }
+            50% { box-shadow: 0 4px 28px rgba(139,94,52,0.55); }
+        }
+
+        /* Creator Modal */
+        .creator-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .creator-modal[hidden] { display: none; }
+        .creator-modal-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.65);
+            backdrop-filter: blur(4px);
+            animation: fadeIn 0.2s ease-out;
+        }
+        .creator-modal-content {
+            position: relative;
+            background: #FDF8F3;
+            color: #2B2118;
+            border-radius: 24px;
+            padding: 32px;
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+            animation: slideUp 0.3s ease-out;
+            direction: rtl;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .creator-modal-close {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: none;
+            background: #2B2118;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+            display: grid;
+            place-items: center;
+        }
+        .creator-modal-close:hover {
+            background: #8B5E34;
+            transform: scale(1.05);
+        }
+
+        .creator-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8B5E34, #2B2118);
+            color: #fff;
+            font-size: 36px;
+            font-weight: 900;
+            display: grid;
+            place-items: center;
+            margin: 0 auto 16px;
+            box-shadow: 0 6px 20px rgba(139,94,52,0.4);
+            border: 2px solid rgba(255,255,255,0.4);
+        }
+
+        .creator-modal-content h3 {
+            font-size: 22px;
+            font-weight: 800;
+            margin: 0 0 4px;
+            color: #2B2118;
+        }
+        .creator-role {
+            color: #8B5E34;
+            font-size: 14px;
+            font-weight: 700;
+            margin: 0 0 20px;
+        }
+
+        .creator-info {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px;
+            text-align: right;
+            border-top: 1px solid rgba(139,94,52,0.15);
+            border-bottom: 1px solid rgba(139,94,52,0.15);
+            padding: 16px 0;
+        }
+        .creator-info li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 14px;
+            flex-wrap: wrap;
+        }
+        .creator-info a {
+            color: #8B5E34;
+            font-weight: 700;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        .creator-info a:hover { text-decoration: underline; }
+        .creator-label { font-weight: 700; color: #2B2118; }
+        .creator-icon { font-size: 18px; }
+
+        .creator-copyright {
+            font-size: 12px;
+            color: #6B5B4A;
+            line-height: 1.8;
+        }
+        .creator-copyright strong { color: #8B5E34; }
+
+        @media (max-width: 640px) {
+            .creator-badge {
+                bottom: 16px;
+                left: 16px;
+                width: 52px;
+                height: 52px;
+                font-size: 24px;
+            }
+            .creator-modal-content { padding: 24px 20px; }
+        }
+    
     </style>
 </head>
 <body class="bg-[#FDF8F3] text-[#2B2118] font-sans antialiased">
@@ -635,7 +806,7 @@
                 return `
                     <div class="bg-white rounded-2xl overflow-hidden card-shadow border border-[#8B5E34]/15 hover:-translate-y-1.5 transition-all duration-300 flex flex-col group">
                         <!-- Media Container -->
-                        <div class="h-60 relative bg-[#1a1410] overflow-hidden cursor-pointer" onclick="openLightboxById(${item.id})">
+                        <div class="work-media h-60 relative bg-[#1a1410] overflow-hidden cursor-pointer" onclick="openLightboxById(${item.id})">
                             ${isVideo ? `
                                 <video src="${item.media}" poster="${item.thumbnail || ''}" autoplay muted loop playsinline preload="metadata" class="w-full h-full object-cover transition duration-500 group-hover:scale-105 pointer-events-none opacity-90"></video>
                                 <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs px-2.5 py-1 rounded-full flex items-center gap-1.5 font-bold z-10">
@@ -764,6 +935,72 @@
             if (nextIdx >= currentFilteredWorks.length) nextIdx = 0;
             openLightbox(nextIdx);
         }
+    </script>
+
+    <!-- Creator Badge (Fixed) -->
+    <button class="creator-badge" id="creatorBadge" aria-label="معلومات المطوّر" title="معلومات المطوّر">
+        Y
+    </button>
+
+    <!-- Creator Modal -->
+    <div class="creator-modal" id="creatorModal" hidden>
+        <div class="creator-modal-overlay" data-close></div>
+        <div class="creator-modal-content">
+            <button class="creator-modal-close" data-close aria-label="إغلاق">✕</button>
+
+            <div class="creator-avatar">Y</div>
+            <h3>أحمد Y10</h3>
+            <p class="creator-role">مطوّر ومصمّم</p>
+
+            <ul class="creator-info">
+                <li>
+                    <span class="creator-icon">📧</span>
+                    <span class="creator-label">البريد الإلكتروني:</span>
+                    <a href="mailto:ahmadengineer494@gmail.com" dir="ltr">ahmadengineer494@gmail.com</a>
+                </li>
+                <li>
+                    <span class="creator-icon">📱</span>
+                    <span class="creator-label">الجوال:</span>
+                    <a href="tel:+966559224570" dir="ltr">+966 55 922 4570</a>
+                </li>
+                <li>
+                    <span class="creator-icon">💬</span>
+                    <span class="creator-label">واتساب:</span>
+                    <a href="https://wa.me/966559224570" dir="ltr" target="_blank" rel="noopener">+966 55 922 4570</a>
+                </li>
+            </ul>
+
+            <div class="creator-copyright">
+                <p>© 2026 جميع الحقوق محفوظة</p>
+                <p>تصميم وتطوير: <strong>أحمد Y10</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Creator Badge Script -->
+    <script>
+        (function() {
+            const badge = document.getElementById('creatorBadge');
+            const modal = document.getElementById('creatorModal');
+            if (!badge || !modal) return;
+
+            function openModal() {
+                modal.hidden = false;
+                document.body.style.overflow = 'hidden';
+            }
+            function closeModal() {
+                modal.hidden = true;
+                document.body.style.overflow = '';
+            }
+
+            badge.addEventListener('click', openModal);
+            modal.querySelectorAll('[data-close]').forEach(el => {
+                el.addEventListener('click', closeModal);
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modal.hidden) closeModal();
+            });
+        })();
     </script>
 </body>
 </html>
