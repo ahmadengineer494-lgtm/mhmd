@@ -3,115 +3,324 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دهانات وديكور جيزان | متخصص دهانات والديكور وتشطيب في جيزان وضواحيها</title>
+    <meta name="description" content="متخصص دهانات والديكور وتشطيب في جيزان وضواحيها - خدمات عالية الجودة، دهانات داخلية وخارجية، ورق جدران، ديكورات جبس وبأسعار تنافسية.">
     
-    <!-- Google Search Console Verification -->
-    <meta name="google-site-verification" content="G-V-Tgw1teMxYIhte7djUS2pB-c9YQdMfchsPvhez24" />
+    <!-- Google Fonts: Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     
-    <title>محمد الحميقاني | تشطيب ودهانات وديكورات</title>
-    <meta name="description" content="محترف تشطيب ودهانات في منطقة جازان - خدمات عالية الجودة بلمسة شخصية">
-    
-    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#3a86ff',
-                        secondary: '#ffbe0b',
+                        primary: '#8B5E34',
+                        accent: '#C08552',
+                        cream: '#FDF8F3',
+                        darkbrown: '#2B2118'
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
+    <style>
+        body { font-family: 'Tajawal', sans-serif; background-color: #FDF8F3; color: #2B2118; }
+        .card-shadow { box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+    </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-800">
-    <custom-navbar></custom-navbar>
-    
-    <main>
-        <!-- Hero Section -->
-        <section class="relative h-screen overflow-hidden">
-            <div class="absolute inset-0 bg-black/30 z-10"></div>
-            <div class="absolute inset-0 flex items-center justify-center z-20 px-4">
-                <div class="text-center max-w-3xl">
-                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">لمسات إبداعية <span class="text-secondary">تغير</span> عالمك</h1>
-                    <p class="text-xl text-white mb-8">محمد الحميقاني - محترف تشطيب ودهانات في منطقة جازان</p>
-                    <div class="flex gap-4 justify-center">
-                        <a href="#contact" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full font-medium transition">تواصل معي</a>
-                        <a href="https://wa.me/966557163264" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
-                            <i data-feather="message-circle"></i>
-                            واتساب
-                        </a>
-                    </div>
-                </div>
+<body class="bg-[#FDF8F3] text-[#2B2118] font-sans antialiased">
+
+    <!-- 1. Header -->
+    <header class="sticky top-0 z-50 bg-[#FDF8F3]/90 backdrop-blur-md border-b border-[#8B5E34]/10">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="#" class="text-xl font-black text-[#8B5E34]">دهانات وديكور جيزان</a>
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="#services" class="hover:text-[#8B5E34] transition">الخدمات</a>
+                <a href="#works" class="hover:text-[#8B5E34] transition">معرض الأعمال</a>
+                <a href="#why-us" class="hover:text-[#8B5E34] transition">لماذا نحن</a>
+                <a href="#faq" class="hover:text-[#8B5E34] transition">الأسئلة الشائعة</a>
+                <a href="#contact" class="hover:text-[#8B5E34] transition">اتصل بنا</a>
+            </nav>
+            <a href="https://wa.me/966557163264" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-md transition flex items-center gap-2">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                واتساب مباشر
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section class="relative py-24 md:py-32 px-4 overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <span class="bg-[#C08552]/15 text-[#8B5E34] px-4 py-1.5 rounded-full text-sm font-bold inline-block mb-6">متخصصون في جيزان وضواحيها</span>
+            <h1 class="text-4xl md:text-6xl font-black text-[#2B2118] leading-tight mb-6">خدمات دهانات وديكور <span class="text-[#8B5E34]">احترافية</span> في جيزان</h1>
+            <p class="text-lg md:text-xl text-[#2B2118]/80 max-w-2xl mx-auto mb-10">نحول مساحاتك إلى تحف فنية متكاملة بأعلى معايير الجودة والدقة وبأفضل الأسعار المنافسة.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="bg-[#8B5E34] hover:bg-[#724a29] text-white px-8 py-4 rounded-2xl font-bold transition card-shadow text-center">اطلب عرض سعر مجاني</a>
+                <a href="#services" class="bg-white hover:bg-gray-50 text-[#8B5E34] border border-[#8B5E34]/30 px-8 py-4 rounded-2xl font-bold transition text-center">تعرّف على خدماتنا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Services Section -->
+    <section id="services" class="py-20 px-4 bg-white/50 border-y border-[#8B5E34]/10">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black text-[#2B2118] mb-3">ما أقدمه من خدمات</h2>
+                <p class="text-[#2B2118]/70">تشطيبات متكاملة وحلول ديكورية مبتكرة تلبي تطلعاتك</p>
             </div>
             
-            <div class="absolute inset-0 paint-animation"></div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-20 px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="flex flex-col md:flex-row gap-12 items-center">
-                    <div class="md:w-1/2">
-                        <h2 class="text-3xl font-bold mb-6 text-primary">من أنا</h2>
-                        <p class="text-lg mb-4">أنا محمد الحميقاني، محترف في مجال التشطيب والدهانات والديكورات، أعمل في منطقة جازان وضواحيها منذ سنوات.</p>
-                        <p class="text-lg mb-4">أتخصص في تحويل المساحات إلى أعمال فنية من خلال الاهتمام بالتفاصيل الدقيقة واستخدام مواد عالية الجودة.</p>
-                        <p class="text-lg">أؤمن بأن الجودة لا تحتاج إلى فريق كبير، بل تحتاج إلى شخص يضع روحه في عمله.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl card-shadow border border-[#8B5E34]/10 hover:translate-y-[-4px] transition duration-300">
+                    <div class="bg-[#8B5E34]/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-[#8B5E34]">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
                     </div>
-                    <div class="md:w-1/2 relative">
-                        <div class="bg-primary/10 rounded-2xl p-8 aspect-square flex items-center justify-center">
-                            <div class="relative">
-                                <div class="absolute -inset-4 bg-secondary/20 rounded-full animate-pulse"></div>
-                                <div class="relative bg-white p-6 rounded-xl shadow-lg">
-                                    <i data-feather="user" class="w-16 h-16 text-primary"></i>
-                                </div>
+                    <h3 class="text-xl font-bold mb-3 text-[#2B2118]">دهانات داخلية</h3>
+                    <p class="text-[#2B2118]/70 text-sm leading-relaxed">تنفيذ أجمل الدهانات الداخلية بأحدث الصيحات والتشطيبات الفاخرة التي تضفي جمالاً على منزلك.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl card-shadow border border-[#8B5E34]/10 hover:translate-y-[-4px] transition duration-300">
+                    <div class="bg-[#8B5E34]/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-[#8B5E34]">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-[#2B2118]">دهانات خارجية</h3>
+                    <p class="text-[#2B2118]/70 text-sm leading-relaxed">دهانات واجهات خارجية مقاومة لعوامل الجوية والحرارة العالية في منطقة جيزان بضمان تام.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl card-shadow border border-[#8B5E34]/10 hover:translate-y-[-4px] transition duration-300">
+                    <div class="bg-[#8B5E34]/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-[#8B5E34]">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-[#2B2118]">ورق جدران</h3>
+                    <p class="text-[#2B2118]/70 text-sm leading-relaxed">تركيب جميع أنواع ورق الجدران والثري دي باحترافية عالية وتنسيق يتماشى مع ديكور المكان.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-2xl card-shadow border border-[#8B5E34]/10 hover:translate-y-[-4px] transition duration-300">
+                    <div class="bg-[#8B5E34]/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-[#8B5E34]">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-[#2B2118]">ديكورات جبس</h3>
+                    <p class="text-[#2B2118]/70 text-sm leading-relaxed">تصميم وتنفيذ أحدث أشكال الديكورات الجبسية والأسقف المعلقة لجميع الغرف والصالات.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-2xl card-shadow border border-[#8B5E34]/10 hover:translate-y-[-4px] transition duration-300">
+                    <div class="bg-[#8B5E34]/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-[#8B5E34]">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-[#2B2118]">تشطيبات كاملة</h3>
+                    <p class="text-[#2B2118]/70 text-sm leading-relaxed">إشراف وتنفيذ كامل لأعمال التشطيب الداخلي للمباني والشقق بأعلى معايير الإتقان.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-2xl card-shadow border border-[#8B5E34]/10 hover:translate-y-[-4px] transition duration-300">
+                    <div class="bg-[#8B5E34]/10 w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-[#8B5E34]">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-[#2B2118]">أسقف مستعارة</h3>
+                    <p class="text-[#2B2118]/70 text-sm leading-relaxed">تركيب الأسقف المستعارة والجبس بورد بخيارات إضاءة مخفية عصرية تبرز جمال المكان.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Previous Works (NEW) -->
+    <section id="works" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black text-[#2B2118] mb-3">معرض الأعمال السابقة</h2>
+                <p class="text-[#2B2118]/70">نماذج من أعمالنا المتميزة في جيزان وضواحيها</p>
+            </div>
+            
+            <div id="works-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl card-shadow border border-[#8B5E34]/10 text-center py-16">
+                    <div class="bg-[#8B5E34]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-[#8B5E34]">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-[#2B2118]">صور الأعمال ستُضاف قريباً</h3>
+                    <p class="text-[#2B2118]/60 text-sm">سيتم عرض الصور ومقاطع الفيديو قريباً فور إرسالها.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Why Choose Us -->
+    <section id="why-us" class="py-20 px-4 bg-white/50 border-y border-[#8B5E34]/10">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black text-[#2B2118] mb-3">لماذا تختارنا؟</h2>
+                <p class="text-[#2B2118]/70">نلتزم بتقديم أفضل خدمة وأعلى مستوى من الإتقان</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-2xl card-shadow border border-[#8B5E34]/10 text-center">
+                    <div class="text-[#8B5E34] text-3xl font-black mb-3">01</div>
+                    <h3 class="text-lg font-bold mb-2 text-[#2B2118]">خبرة طويلة</h3>
+                    <p class="text-[#2B2118]/70 text-sm">خبرة واسعة في تنفيذ مشاريع الدهانات والديكور في جيزان.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl card-shadow border border-[#8B5E34]/10 text-center">
+                    <div class="text-[#8B5E34] text-3xl font-black mb-3">02</div>
+                    <h3 class="text-lg font-bold mb-2 text-[#2B2118]">جودة عالية</h3>
+                    <p class="text-[#2B2118]/70 text-sm">استخدام أجود أنواع الدهانات والمواد لضمان دوام الجمال.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl card-shadow border border-[#8B5E34]/10 text-center">
+                    <div class="text-[#8B5E34] text-3xl font-black mb-3">03</div>
+                    <h3 class="text-lg font-bold mb-2 text-[#2B2118]">أسعار تنافسية</h3>
+                    <p class="text-[#2B2118]/70 text-sm">تقديم أفضل الأسعار التي تناسب ميزانيتك مع ضمان الإتقان.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl card-shadow border border-[#8B5E34]/10 text-center">
+                    <div class="text-[#8B5E34] text-3xl font-black mb-3">04</div>
+                    <h3 class="text-lg font-bold mb-2 text-[#2B2118]">سرعة التسليم</h3>
+                    <p class="text-[#2B2118]/70 text-sm">الالتزام بالمواعيد المحددة وإنجاز العمل في الوقت المتفق عليه.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Testimonials -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black text-[#2B2118] mb-3">آراء العملاء</h2>
+                <p class="text-[#2B2118]/70">ما يقوله عملاؤنا الكرام عن جودة خدماتنا</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl card-shadow border border-[#8B5E34]/10">
+                    <p class="text-[#2B2118]/80 text-sm italic mb-4">"آراء العملاء ستُضاف لاحقاً."</p>
+                    <div class="font-bold text-sm text-[#8B5E34]">— عميل كريم</div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl card-shadow border border-[#8B5E34]/10">
+                    <p class="text-[#2B2118]/80 text-sm italic mb-4">"آراء العملاء ستُضاف لاحقاً."</p>
+                    <div class="font-bold text-sm text-[#8B5E34]">— عميل كريم</div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl card-shadow border border-[#8B5E34]/10">
+                    <p class="text-[#2B2118]/80 text-sm italic mb-4">"آراء العملاء ستُضاف لاحقاً."</p>
+                    <div class="font-bold text-sm text-[#8B5E34]">— عميل كريم</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section id="faq" class="py-20 px-4 bg-white/50 border-y border-[#8B5E34]/10">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black text-[#2B2118] mb-3">الأسئلة الشائعة</h2>
+                <p class="text-[#2B2118]/70">إجابات على أبرز استفساراتكم</p>
+            </div>
+            
+            <div class="space-y-4">
+                <details class="bg-white p-6 rounded-2xl card-shadow border border-[#8B5E34]/10 group">
+                    <summary class="font-bold cursor-pointer text-[#2B2118] flex justify-between items-center">
+                        ما هي المدن والمناطق التي تغطونها؟
+                        <span class="transition group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="text-[#2B2118]/70 text-sm mt-4 leading-relaxed">نغطي كافة مدن ومحافظات منطقة جازان وضواحيها.</p>
+                </details>
+                <details class="bg-white p-6 rounded-2xl card-shadow border border-[#8B5E34]/10 group">
+                    <summary class="font-bold cursor-pointer text-[#2B2118] flex justify-between items-center">
+                        كيف يمكنني طلب معاينة أو عرض سعر؟
+                        <span class="transition group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="text-[#2B2118]/70 text-sm mt-4 leading-relaxed">يمكنك التواصل معنا مباشرة عبر زر الواتساب في الموقع لتحديد موعد المعاينة وتقديم عرض سعر مجاني.</p>
+                </details>
+                <details class="bg-white p-6 rounded-2xl card-shadow border border-[#8B5E34]/10 group">
+                    <summary class="font-bold cursor-pointer text-[#2B2118] flex justify-between items-center">
+                        هل تقدمون ضماناً على أعمال الدهانات؟
+                        <span class="transition group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="text-[#2B2118]/70 text-sm mt-4 leading-relaxed">نعم، نقدم ضماناً على جودة المواد المستخدمة ودقة التنفيذ ضد التقشير أو تغير الألوان.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CTA Band -->
+    <section class="py-16 px-4 bg-[#8B5E34] text-white text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-black mb-4">احصل على عرض سعر مجاني الآن</h2>
+            <p class="text-white/90 mb-8 max-w-xl mx-auto">فريقنا مستعد لتلبية طلباتكم وتحويل منازلكم ومكاتبكم لأفضل حلة.</p>
+            <a href="https://wa.me/966557163264" target="_blank" class="bg-white text-[#8B5E34] hover:bg-cream px-8 py-4 rounded-2xl font-bold inline-block shadow-lg transition">تواصل عبر واتساب فوراً</a>
+        </div>
+    </section>
+
+    <!-- 9. Contact Section -->
+    <section id="contact" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black text-[#2B2118] mb-3">اتصل بنا</h2>
+                <p class="text-[#2B2118]/70">يسعدنا تلقي استفساراتكم وطلباتكم</p>
+            </div>
+            
+            <div class="bg-white p-8 md:p-12 rounded-3xl card-shadow border border-[#8B5E34]/10">
+                <form onsubmit="event.preventDefault(); alert('تم إرسال رسالتك بنجاح، سنتواصل معك قريباً!');" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold mb-2 text-[#2B2118]">الاسم الكريم</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-xl border border-[#8B5E34]/20 focus:outline-none focus:border-[#8B5E34] bg-cream/30 text-sm" placeholder="أدخل اسمك">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2 text-[#2B2118]">رقم الجوال / الواتساب</label>
+                            <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-[#8B5E34]/20 focus:outline-none focus:border-[#8B5E34] bg-cream/30 text-sm" placeholder="05xxxxxxxx">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold mb-2 text-[#2B2118]">تفاصيل الطلب أو الاستفسار</label>
+                        <textarea rows="4" required class="w-full px-4 py-3 rounded-xl border border-[#8B5E34]/20 focus:outline-none focus:border-[#8B5E34] bg-cream/30 text-sm" placeholder="اكتب تفاصيل المساحة ونوع العمل المطلوبة..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-[#8B5E34] hover:bg-[#724a29] text-white py-4 rounded-xl font-bold transition">إرسال الطلب</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Footer -->
+    <footer class="bg-[#2B2118] text-white py-12 px-4 border-t border-[#8B5E34]/20">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-right">
+            <div>
+                <div class="text-xl font-black text-white mb-2">دهانات وديكور جيزان</div>
+                <p class="text-white/60 text-sm">متخصص دهانات والديكور وتشطيب في جيزان وضواحيها</p>
+            </div>
+            <div class="text-white/60 text-sm">
+                جميع حقوق الطبع والنشر محفوظة © 2026
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script to load works.json -->
+    <script>
+        fetch('assets/works.json')
+            .then(res => res.json())
+            .then(data => {
+                if (data && data.length > 0) {
+                    const grid = document.getElementById('works-grid');
+                    grid.innerHTML = data.map(item => `
+                        <div class="bg-white rounded-2xl card-shadow border border-[#8B5E34]/10 overflow-hidden">
+                            ${item.type === 'video' ? 
+                                `<video src="${item.media}" controls class="w-full h-56 object-cover"></video>` :
+                                `<img src="${item.media}" alt="${item.title}" class="w-full h-56 object-cover">`
+                            }
+                            <div class="p-6">
+                                <span class="text-xs font-bold bg-[#8B5E34]/10 text-[#8B5E34] px-3 py-1 rounded-full inline-block mb-3">${item.category}</span>
+                                <h3 class="text-xl font-bold mb-2 text-[#2B2118]">${item.title}</h3>
+                                <p class="text-[#2B2118]/70 text-sm">${item.description || ''}</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="py-20 bg-gray-100 px-4">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold mb-12 text-center text-primary">ما أقدمه من خدمات</h2>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- خدماتك كما هي من الكود الأصلي -->
-                    <!-- دهانات داخلية وخارجية -->
-                    <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                        <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                            <i data-feather="home" class="text-primary w-8 h-8"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">دهانات داخلية وخارجية</h3>
-                        <p class="text-gray-600">أقدم خدمات الدهان بجودة عالية باستخدام أفضل أنواع الطلاء وأحدث التقنيات.</p>
-                    </div>
-                    
-                    <!-- أكمل باقي الخدمات بنفس الكود الأصلي -->
-                </div>
-            </div>
-        </section>
-
-        <!-- باقي الأقسام: How I Work و Contact كما هي في الكود الأصلي -->
-        <!-- يمكنك نسخهم بالكامل من الكود السابق بدون أي تغيير -->
-    </main>
-
-    <custom-footer></custom-footer>
-
-    <a href="https://wa.me/966557163264" class="fixed bottom-6 left-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition z-50">
-        <i data-feather="message-circle" class="w-6 h-6"></i>
-    </a>
-
-    <script src="components/navbar.js"></script>
-    <script src="components/footer.js"></script>
-    <script src="script.js"></script>
-    <script>
-        feather.replace();
+                    `).join('');
+                }
+            })
+            .catch(e => console.log('No works yet or works.json not found'));
     </script>
 </body>
 </html>
