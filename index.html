@@ -34,6 +34,42 @@
         body { font-family: 'Tajawal', sans-serif; background-color: #FDF8F3; color: #2B2118; }
         .card-shadow { box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
     </style>
+
+<style>
+.watermark {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    pointer-events: none;
+    user-select: none;
+    z-index: 2;
+    font-family: inherit;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .watermark {
+        font-size: 11px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+.lightbox-watermark {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 18px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    pointer-events: none;
+    user-select: none;
+    z-index: 100;
+    font-weight: bold;
+}
+</style>
+
 </head>
 <body class="bg-[#FDF8F3] text-[#2B2118] font-sans antialiased">
 
@@ -46,7 +82,7 @@
                 <a href="#works" class="hover:text-[#8B5E34] transition">معرض الأعمال</a>
                 <a href="#why-us" class="hover:text-[#8B5E34] transition">لماذا نحن</a>
                 <a href="#faq" class="hover:text-[#8B5E34] transition">الأسئلة الشائعة</a>
-                <a href="#contact" class="hover:text-[#8B5E34] transition">اتصل بنا</a>
+                
             </nav>
             <a href="https://wa.me/966557163264" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-md transition flex items-center gap-2">
                 <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
@@ -62,7 +98,7 @@
             <h1 class="text-4xl md:text-6xl font-black text-[#2B2118] leading-tight mb-6">خدمات دهانات وديكور <span class="text-[#8B5E34]">احترافية</span> في جيزان</h1>
             <p class="text-lg md:text-xl text-[#2B2118]/80 max-w-2xl mx-auto mb-10">نحول مساحاتك إلى تحف فنية متكاملة بأعلى معايير الجودة والدقة وبأفضل الأسعار المنافسة.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" class="bg-[#8B5E34] hover:bg-[#724a29] text-white px-8 py-4 rounded-2xl font-bold transition card-shadow text-center">اطلب عرض سعر مجاني</a>
+                
                 <a href="#services" class="bg-white hover:bg-gray-50 text-[#8B5E34] border border-[#8B5E34]/30 px-8 py-4 rounded-2xl font-bold transition text-center">تعرّف على خدماتنا</a>
             </div>
         </div>
@@ -134,40 +170,22 @@
         </div>
     </section>
 
-        <!-- 4. Previous Works (GALLERY) -->
+    <!-- 4. Previous Works (NEW) -->
     <section id="works" class="py-20 px-4">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-12">
-                <span class="text-xs font-bold tracking-widest text-[#8B5E34] uppercase bg-[#8B5E34]/10 px-4 py-1.5 rounded-full inline-block mb-3">معرض المشاريع</span>
-                <h2 class="text-3xl md:text-4xl font-black text-[#2B2118] mb-4">معرض الأعمال السابقة</h2>
-                <p class="text-[#2B2118]/70 max-w-2xl mx-auto text-base">نماذج حية وموثقة بالفيديو والصور من أعمالنا المتميزة في الدهانات والديكور بجيزان وضواحيها</p>
-            </div>
-
-            <!-- Category Filter Pills -->
-            <div class="flex flex-wrap justify-center gap-2.5 mb-10" id="category-filters">
-                <button type="button" data-filter="all" class="filter-btn bg-[#8B5E34] text-white shadow-md shadow-[#8B5E34]/20 border border-[#8B5E34] px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-200">
-                    الكل <span class="opacity-80 text-xs mr-1">(17)</span>
-                </button>
-                <button type="button" data-filter="دهانات داخلية" class="filter-btn bg-white text-[#2B2118]/80 hover:bg-[#8B5E34]/10 hover:text-[#8B5E34] border border-[#8B5E34]/20 px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-200">
-                    دهانات داخلية <span class="opacity-80 text-xs mr-1">(5)</span>
-                </button>
-                <button type="button" data-filter="ديكورات جبس" class="filter-btn bg-white text-[#2B2118]/80 hover:bg-[#8B5E34]/10 hover:text-[#8B5E34] border border-[#8B5E34]/20 px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-200">
-                    ديكورات جبس <span class="opacity-80 text-xs mr-1">(4)</span>
-                </button>
-                <button type="button" data-filter="تشطيبات كاملة" class="filter-btn bg-white text-[#2B2118]/80 hover:bg-[#8B5E34]/10 hover:text-[#8B5E34] border border-[#8B5E34]/20 px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-200">
-                    تشطيبات كاملة <span class="opacity-80 text-xs mr-1">(4)</span>
-                </button>
-                <button type="button" data-filter="أسقف مستعارة" class="filter-btn bg-white text-[#2B2118]/80 hover:bg-[#8B5E34]/10 hover:text-[#8B5E34] border border-[#8B5E34]/20 px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-200">
-                    أسقف مستعارة <span class="opacity-80 text-xs mr-1">(2)</span>
-                </button>
-                <button type="button" data-filter="بديل الرخام والخشب" class="filter-btn bg-white text-[#2B2118]/80 hover:bg-[#8B5E34]/10 hover:text-[#8B5E34] border border-[#8B5E34]/20 px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-200">
-                    بديل الرخام والخشب <span class="opacity-80 text-xs mr-1">(2)</span>
-                </button>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-black text-[#2B2118] mb-3">معرض الأعمال السابقة</h2>
+                <p class="text-[#2B2118]/70">نماذج من أعمالنا المتميزة في جيزان وضواحيها</p>
             </div>
             
-            <!-- Works Grid -->
-            <div id="works-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 min-h-[300px]">
-                <!-- Cards rendered dynamically via JS -->
+            <div id="works-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl card-shadow border border-[#8B5E34]/10 text-center py-16">
+                    <div class="bg-[#8B5E34]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-[#8B5E34]">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 text-[#2B2118]">صور الأعمال ستُضاف قريباً</h3>
+                    <p class="text-[#2B2118]/60 text-sm">سيتم عرض الصور ومقاطع الفيديو قريباً فور إرسالها.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -274,34 +292,7 @@
     </section>
 
     <!-- 9. Contact Section -->
-    <section id="contact" class="py-20 px-4">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-black text-[#2B2118] mb-3">اتصل بنا</h2>
-                <p class="text-[#2B2118]/70">يسعدنا تلقي استفساراتكم وطلباتكم</p>
-            </div>
-            
-            <div class="bg-white p-8 md:p-12 rounded-3xl card-shadow border border-[#8B5E34]/10">
-                <form onsubmit="event.preventDefault(); alert('تم إرسال رسالتك بنجاح، سنتواصل معك قريباً!');" class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-bold mb-2 text-[#2B2118]">الاسم الكريم</label>
-                            <input type="text" required class="w-full px-4 py-3 rounded-xl border border-[#8B5E34]/20 focus:outline-none focus:border-[#8B5E34] bg-cream/30 text-sm" placeholder="أدخل اسمك">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold mb-2 text-[#2B2118]">رقم الجوال / الواتساب</label>
-                            <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-[#8B5E34]/20 focus:outline-none focus:border-[#8B5E34] bg-cream/30 text-sm" placeholder="05xxxxxxxx">
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-bold mb-2 text-[#2B2118]">تفاصيل الطلب أو الاستفسار</label>
-                        <textarea rows="4" required class="w-full px-4 py-3 rounded-xl border border-[#8B5E34]/20 focus:outline-none focus:border-[#8B5E34] bg-cream/30 text-sm" placeholder="اكتب تفاصيل المساحة ونوع العمل المطلوبة..."></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-[#8B5E34] hover:bg-[#724a29] text-white py-4 rounded-xl font-bold transition">إرسال الطلب</button>
-                </form>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- 10. Footer -->
     <footer class="bg-[#2B2118] text-white py-12 px-4 border-t border-[#8B5E34]/20">
@@ -316,427 +307,54 @@
         </div>
     </footer>
 
-        <!-- Lightbox Modal -->
-    <div id="lightbox-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md hidden transition-opacity duration-300 opacity-0" role="dialog" aria-modal="true">
-        <!-- Close button -->
-        <button id="lightbox-close" class="absolute top-4 left-4 md:top-6 md:left-6 z-20 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 p-2.5 rounded-full transition" aria-label="إغلاق">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-
-        <!-- Prev button (Right in RTL) -->
-        <button id="lightbox-prev" class="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-20 text-white/80 hover:text-white bg-black/40 hover:bg-black/70 p-3 rounded-full transition" aria-label="السابق">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-        </button>
-
-        <!-- Next button (Left in RTL) -->
-        <button id="lightbox-next" class="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-20 text-white/80 hover:text-white bg-black/40 hover:bg-black/70 p-3 rounded-full transition" aria-label="التالي">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-        </button>
-
-        <!-- Modal Content Container -->
-        <div id="lightbox-card" class="relative max-w-4xl w-full bg-[#1e1712] rounded-2xl overflow-hidden shadow-2xl border border-white/10 flex flex-col max-h-[92vh]">
-            <!-- Media Holder -->
-            <div id="lightbox-media-container" class="relative flex items-center justify-center bg-black min-h-[300px] max-h-[64vh] overflow-hidden">
-                <!-- Video or Image injected here -->
-            </div>
-            <!-- Caption & Actions -->
-            <div class="p-5 md:p-6 bg-[#2B2118] text-white flex flex-col md:flex-row md:items-center justify-between gap-4 border-t border-white/10">
-                <div class="space-y-1 text-right">
-                    <div class="flex items-center gap-2">
-                        <span id="lightbox-category" class="text-xs font-bold bg-[#C08552] text-white px-3 py-0.5 rounded-full"></span>
-                        <span id="lightbox-counter" class="text-xs text-white/50"></span>
-                    </div>
-                    <h3 id="lightbox-title" class="text-lg md:text-xl font-black text-white"></h3>
-                    <p id="lightbox-desc" class="text-xs md:text-sm text-white/70"></p>
-                </div>
-                <div class="flex items-center gap-3">
-                    <a id="lightbox-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba59] text-white px-6 py-3.5 rounded-xl font-bold text-sm transition shadow-lg shadow-[#25D366]/20">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                        <span>طلب تنفيذ مثل هذا العمل</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Gallery & Works Script -->
+    <!-- Script to load works.json -->
+    
     <script>
-        // Embedded works data for 100% offline & file:// compatibility
-        const EMBEDDED_WORKS = [
-    {
-        "id": 1,
-        "title": "دهانات داخلية عصرية - صالات ومجالس",
-        "category": "دهانات داخلية",
-        "type": "image",
-        "media": "assets/works/عمل-دهانات-داخلية-1.jpg",
-        "thumbnail": "assets/works/عمل-دهانات-داخلية-1.jpg",
-        "description": "تنفيذ أحدث ألوان وتدرجات الدهانات الداخلية بأعلى دقة واحترافية"
-    },
-    {
-        "id": 2,
-        "title": "ديكورات أسقف وجبس بورد فخمة",
-        "category": "ديكورات جبس",
-        "type": "image",
-        "media": "assets/works/عمل-ديكورات-جبس-1.jpg",
-        "thumbnail": "assets/works/عمل-ديكورات-جبس-1.jpg",
-        "description": "تصميم وتنفيذ ديكورات جبس بورد مع مسارات إضاءة مخفية أنيقة"
-    },
-    {
-        "id": 3,
-        "title": "تشطيبات متكاملة ودهانات وديكور",
-        "category": "تشطيبات كاملة",
-        "type": "image",
-        "media": "assets/works/عمل-تشطيبات-كاملة-1.jpg",
-        "thumbnail": "assets/works/عمل-تشطيبات-كاملة-1.jpg",
-        "description": "تشطيب نهائي متناسق يجمع بين فخامة الجبس ونعومة الدهان"
-    },
-    {
-        "id": 4,
-        "title": "جولة تشطيب صالة ومجلس رئيسي",
-        "category": "تشطيبات كاملة",
-        "type": "video",
-        "media": "assets/works/فيديو-عمل-1.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-1-thumb.jpg",
-        "description": "إشراف وتنفيذ أعمال الدهان والديكور والإضاءة المخفية"
-    },
-    {
-        "id": 5,
-        "title": "تنفيذ ديكورات جبس بورد مضاءة",
-        "category": "ديكورات جبس",
-        "type": "video",
-        "media": "assets/works/فيديو-عمل-2.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-2-thumb.jpg",
-        "description": "تركيب ألواح الجبس مع توزيع فتحات السبوت لايت والشريط المضيء"
-    },
-    {
-        "id": 6,
-        "title": "دهان جدران ناعم مطفي فاخر",
-        "category": "دهانات داخلية",
-        "type": "video",
-        "media": "assets/works/فيديو-عمل-3.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-3-thumb.jpg",
-        "description": "طبقات دهان بجودة فائقة ونعومة متناهية بدون أي تموجات"
-    },
-    {
-        "id": 7,
-        "title": "تشطيب أسقف مستعارة فندقية",
-        "category": "أسقف مستعارة",
-        "type": "video",
-        "media": "assets/works/فيديو-عمل-4.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-4-thumb.jpg",
-        "description": "تنفيذ هندسي دقيق لأسقف الغرف والممرات"
-    },
-    {
-        "id": 8,
-        "title": "تركيب وتنسيق بديل الرخام والجدران",
-        "category": "بديل الرخام والخشب",
-        "type": "video",
-        "media": "assets/works/فيديو-عمل-5.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-5-thumb.jpg",
-        "description": "دمج بديل الرخام مع شرائح بديل الخشب لإضفاء طابع فخم"
-    },
-    {
-        "id": 9,
-        "title": "إتقان تفاصيل زوايا الجبس بورد",
-        "category": "ديكورات جبس",
-        "type": "video",
-        "media": "assets/works/فيديو-عمل-6.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-6-thumb.jpg",
-        "description": "تنعيم ومعجنة الفواصل والزوايا باحترافية تامة"
-    },
-    {
-        "id": 10,
-        "title": "دهانات داخلية بألوان عصرية هادئة",
-        "category": "دهانات داخلية",
-        "type": "video",
-        "media": "assets/works/فيديو-عمل-7.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-7-thumb.jpg",
-        "description": "تناسق ألوان أوف وايت ودرجات البيج المريحة للعين"
-    },
-    {
-        "id": 11,
-        "title": "تشطيب نهائي لفيلا في جيزان",
-        "category": "تشطيبات كاملة",
-        "type": "video",
-        "media": "assets/works/فيديو-عمل-8.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-8-thumb.jpg",
-        "description": "تسليم كامل للموقع بجودة عالية وفق رغبة العميل"
-    },
-    {
-        "id": 12,
-        "title": "أعمال دهان ديكوري ولمسات جمالية",
-        "category": "دهانات داخلية",
-        "type": "video",
-        "media": "assets/works/فيديو-عمل-9.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-9-thumb.jpg",
-        "description": "تطبيق مؤثرات دهان فنية على الجدران المميزة"
-    },
-    {
-        "id": 13,
-        "title": "تصميم وتركيب شاشة تلفزيون بديل خشب",
-        "category": "بديل الرخام والخشب",
-        "type": "video",
-        "media": "assets/works/فيديو-عمل-10.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-10-thumb.jpg",
-        "description": "خلفيات شاشة عصرية مدمجة بإضاءة ليد مخفية"
-    },
-    {
-        "id": 14,
-        "title": "تنفيذ أسقف جبسية كلاسيكية وحديثة",
-        "category": "ديكورات جبس",
-        "type": "video",
-        "media": "assets/works/فيديو-عمل-11.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-11-thumb.jpg",
-        "description": "تنوع في التشكيل الجبسي ليناسب كافة الأذواق"
-    },
-    {
-        "id": 15,
-        "title": "صنفرة ودهان أساس ومعجون ناعم",
-        "category": "تشطيبات كاملة",
-        "type": "video",
-        "media": "assets/works/فيديو-عمل-12.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-12-thumb.jpg",
-        "description": "تأسيس هندسي سليم قبل دهان الطبقات النهائية"
-    },
-    {
-        "id": 16,
-        "title": "تشطيب ممرات ومداخل بديكور عصري",
-        "category": "أسقف مستعارة",
-        "type": "video",
-        "media": "assets/works/فيديو-عمل-13.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-13-thumb.jpg",
-        "description": "توزيع إضاءة ذكي يعطي اتساعاً وفخامة للممر"
-    },
-    {
-        "id": 17,
-        "title": "نظرة شاملة على اكتمال أعمال الدهان",
-        "category": "دهانات داخلية",
-        "type": "video",
-        "media": "assets/works/فيديو-عمل-14.mp4",
-        "thumbnail": "assets/works/thumbnails/فيديو-عمل-14-thumb.jpg",
-        "description": "جاهزية المكان بعد إتمام جميع مراحل الصبغ والتلميع"
-    }
-];
-
-        let allWorks = EMBEDDED_WORKS;
-        let currentFilter = 'all';
-        let currentLightboxIndex = -1;
-        let currentFilteredWorks = [];
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // Check if loaded over HTTP/HTTPS to fetch dynamic updates
-            if (window.location.protocol.startsWith('http')) {
-                fetch('assets/works.json')
-                    .then(res => res.json())
-                    .then(data => {
-                        if (Array.isArray(data) && data.length > 0) {
-                            allWorks = data;
-                        }
-                        applyFilter('all');
-                    })
-                    .catch(err => {
-                        console.warn('Using embedded works:', err);
-                        applyFilter('all');
-                    });
-            } else {
-                applyFilter('all');
-            }
-
-            // Set up category filter pills
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            filterButtons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    filterButtons.forEach(b => {
-                        b.className = 'filter-btn bg-white text-[#2B2118]/80 hover:bg-[#8B5E34]/10 hover:text-[#8B5E34] border border-[#8B5E34]/20 px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-200';
-                    });
-                    btn.className = 'filter-btn bg-[#8B5E34] text-white shadow-md shadow-[#8B5E34]/20 border border-[#8B5E34] px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-200';
-
-                    const filter = btn.getAttribute('data-filter');
-                    applyFilter(filter);
-                });
-            });
-
-            // Set up Lightbox actions
-            const closeBtn = document.getElementById('lightbox-close');
-            const prevBtn = document.getElementById('lightbox-prev');
-            const nextBtn = document.getElementById('lightbox-next');
+        function openLightbox(mediaUrl, mediaType) {
             const modal = document.getElementById('lightbox-modal');
-
-            if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
-            if (prevBtn) prevBtn.addEventListener('click', prevLightbox);
-            if (nextBtn) nextBtn.addEventListener('click', nextLightbox);
-
-            if (modal) {
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal || e.target.id === 'lightbox-card-wrapper') {
-                        closeLightbox();
-                    }
-                });
-            }
-
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                const m = document.getElementById('lightbox-modal');
-                if (m && !m.classList.contains('hidden')) {
-                    if (e.key === 'Escape') closeLightbox();
-                    if (e.key === 'ArrowRight') prevLightbox();
-                    if (e.key === 'ArrowLeft') nextLightbox();
-                }
-            });
-        });
-
-        function applyFilter(category) {
-            currentFilter = category;
-            if (category === 'all') {
-                currentFilteredWorks = allWorks;
+            const content = document.getElementById('lightbox-content');
+            if (mediaType === 'video') {
+                content.innerHTML = `<div style="position:relative; display:inline-block; max-width:90vw; max-height:90vh;"><video src="${mediaUrl}" controls autoplay class="max-w-full max-h-[85vh] rounded-2xl"></video><span class="lightbox-watermark">دهنات وديكور جيزان</span></div>`;
             } else {
-                currentFilteredWorks = allWorks.filter(w => w.category === category);
+                content.innerHTML = `<div style="position:relative; display:inline-block; max-width:90vw; max-height:90vh;"><img src="${mediaUrl}" class="max-w-full max-h-[85vh] object-contain rounded-2xl"><span class="lightbox-watermark">دهنات وديكور جيزان</span></div>`;
             }
-            renderWorks(currentFilteredWorks);
-        }
-
-        function renderWorks(works) {
-            const grid = document.getElementById('works-grid');
-            if (!grid) return;
-
-            if (!works || works.length === 0) {
-                grid.innerHTML = `
-                    <div class="col-span-full bg-white p-12 rounded-2xl card-shadow border border-[#8B5E34]/10 text-center">
-                        <p class="text-[#2B2118]/60 text-base">لا توجد أعمال مدرجة في هذا القسم حالياً.</p>
-                    </div>
-                `;
-                return;
-            }
-
-            grid.innerHTML = works.map((item) => {
-                const isVideo = item.type === 'video';
-                const waMsg = encodeURIComponent(`السلام عليكم، أود الاستفسار وطلب معاينة لـ: ${item.title}`);
-                const waUrl = `https://wa.me/966557163264?text=${waMsg}`;
-
-                return `
-                    <div class="bg-white rounded-2xl overflow-hidden card-shadow border border-[#8B5E34]/15 hover:-translate-y-1.5 transition-all duration-300 flex flex-col group">
-                        <!-- Media Container -->
-                        <div class="h-64 relative bg-[#2B2118]/5 overflow-hidden cursor-pointer" onclick="openLightboxById(${item.id})">
-                            ${isVideo ? `
-                                <video src="${item.media}" poster="${item.thumbnail || ''}" autoplay muted loop playsinline preload="metadata" class="w-full h-full object-cover transition duration-500 group-hover:scale-105"></video>
-                                <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs px-2.5 py-1 rounded-full flex items-center gap-1.5 font-bold z-10">
-                                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                                    فيديو
-                                </span>
-                            ` : `
-                                <img src="${item.media}" alt="${item.title}" loading="lazy" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
-                                <span class="absolute top-3 right-3 bg-black/60 backdrop-blur-md text-white text-xs px-2.5 py-1 rounded-full flex items-center gap-1.5 font-bold z-10">
-                                    <svg class="w-3.5 h-3.5 fill-none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                                    صورة
-                                </span>
-                            `}
-                            <!-- Hover zoom effect -->
-                            <div class="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <span class="bg-white/20 backdrop-blur-md text-white p-3.5 rounded-full shadow-lg transform group-hover:scale-110 transition">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
-                                </span>
-                            </div>
-                        </div>
-
-                        <!-- Card Content -->
-                        <div class="p-5 flex flex-col flex-1 justify-between">
-                            <div>
-                                <span class="inline-block text-xs font-bold text-[#8B5E34] bg-[#8B5E34]/10 px-3 py-1 rounded-full mb-2.5">${item.category}</span>
-                                <h3 class="text-lg font-bold text-[#2B2118] mb-1.5 group-hover:text-[#8B5E34] transition">${item.title}</h3>
-                                <p class="text-[#2B2118]/70 text-sm leading-relaxed">${item.description || ''}</p>
-                            </div>
-
-                            <div class="mt-4 pt-3 border-t border-[#8B5E34]/10 flex items-center justify-between">
-                                <button type="button" onclick="openLightboxById(${item.id})" class="text-xs font-bold text-[#8B5E34] hover:text-[#724a29] flex items-center gap-1 transition">
-                                    <span>تكبير وعرض</span>
-                                    <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-                                </button>
-                                <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#128C7E] bg-[#25D366]/15 hover:bg-[#25D366] hover:text-white px-3 py-1.5 rounded-lg transition" title="طلب معاينة عبر واتساب">
-                                    <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                                    <span>طلب معاينة</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        function openLightboxById(id) {
-            const idx = currentFilteredWorks.findIndex(w => w.id === id);
-            if (idx !== -1) openLightbox(idx);
-        }
-
-        function openLightbox(index) {
-            if (index < 0 || index >= currentFilteredWorks.length) return;
-            currentLightboxIndex = index;
-            const item = currentFilteredWorks[index];
-
-            const modal = document.getElementById('lightbox-modal');
-            const container = document.getElementById('lightbox-media-container');
-            const title = document.getElementById('lightbox-title');
-            const desc = document.getElementById('lightbox-desc');
-            const category = document.getElementById('lightbox-category');
-            const counter = document.getElementById('lightbox-counter');
-            const waBtn = document.getElementById('lightbox-wa-btn');
-
-            title.textContent = item.title;
-            desc.textContent = item.description || '';
-            category.textContent = item.category;
-            counter.textContent = `${index + 1} / ${currentFilteredWorks.length}`;
-
-            const waMsg = encodeURIComponent(`السلام عليكم، أرغب في تنفيذ عمل مشابه لـ: ${item.title}`);
-            waBtn.href = `https://wa.me/966557163264?text=${waMsg}`;
-
-            if (item.type === 'video') {
-                container.innerHTML = `
-                    <video src="${item.media}" poster="${item.thumbnail || ''}" controls autoplay playsinline class="max-h-[62vh] w-auto max-w-full rounded-lg shadow-2xl object-contain"></video>
-                `;
-            } else {
-                container.innerHTML = `
-                    <img src="${item.media}" alt="${item.title}" class="max-h-[62vh] w-auto max-w-full rounded-lg shadow-2xl object-contain">
-                `;
-            }
-
             modal.classList.remove('hidden');
-            requestAnimationFrame(() => {
-                modal.classList.remove('opacity-0');
-            });
-            document.body.style.overflow = 'hidden';
+            modal.classList.add('flex');
         }
 
         function closeLightbox() {
             const modal = document.getElementById('lightbox-modal');
-            if (!modal) return;
-            modal.classList.add('opacity-0');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                const container = document.getElementById('lightbox-media-container');
-                if (container) {
-                    const vid = container.querySelector('video');
-                    if (vid) {
-                        vid.pause();
-                        vid.src = '';
-                    }
-                    container.innerHTML = '';
+            const content = document.getElementById('lightbox-content');
+            content.innerHTML = '';
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        fetch('assets/works.json')
+            .then(res => res.json())
+            .then(data => {
+                if (data && data.length > 0) {
+                    const grid = document.getElementById('works-grid');
+                    grid.innerHTML = data.map(item => `
+                        <div class="bg-white rounded-2xl card-shadow border border-[#8B5E34]/10 overflow-hidden">
+                            <div class="work-media cursor-pointer" style="position:relative; overflow:hidden;" onclick="openLightbox('${item.media}', '${item.type}')">
+                                ${item.type === 'video' ? 
+                                    `<video src="${item.media}" class="w-full h-56 object-cover pointer-events-none"></video>` :
+                                    `<img src="${item.media}" alt="${item.title}" class="w-full h-56 object-cover">`
+                                }
+                                <span class="watermark">دهنات وديكور جيزان</span>
+                            </div>
+                            <div class="p-6">
+                                <span class="text-xs font-bold bg-[#8B5E34]/10 text-[#8B5E34] px-3 py-1 rounded-full inline-block mb-3">${item.category}</span>
+                                <h3 class="text-xl font-bold mb-2 text-[#2B2118]">${item.title}</h3>
+                                <p class="text-[#2B2118]/70 text-sm">${item.description || ''}</p>
+                            </div>
+                        </div>
+                    `).join('');
                 }
-                document.body.style.overflow = '';
-            }, 200);
-        }
-
-        function prevLightbox() {
-            if (currentFilteredWorks.length <= 1) return;
-            let nextIdx = currentLightboxIndex - 1;
-            if (nextIdx < 0) nextIdx = currentFilteredWorks.length - 1;
-            openLightbox(nextIdx);
-        }
-
-        function nextLightbox() {
-            if (currentFilteredWorks.length <= 1) return;
-            let nextIdx = currentLightboxIndex + 1;
-            if (nextIdx >= currentFilteredWorks.length) nextIdx = 0;
-            openLightbox(nextIdx);
-        }
+            })
+            .catch(e => console.log('No works yet or works.json not found'));
     </script>
+
 </body>
 </html>
