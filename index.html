@@ -339,7 +339,14 @@
                         <div class="bg-white rounded-2xl card-shadow border border-[#8B5E34]/10 overflow-hidden">
                             <div class="work-media cursor-pointer" style="position:relative; overflow:hidden;" onclick="openLightbox('${item.media}', '${item.type}')">
                                 ${item.type === 'video' ? 
-                                    `<video src="${item.media}" class="w-full h-56 object-cover pointer-events-none"></video>` :
+                                    `<div style="position:relative; width:100%; height:14rem; background:#000;">
+                                        <video src="${item.media}" class="w-full h-56 object-cover pointer-events-none opacity-80"></video>
+                                        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;">
+                                            <div style="width:60px; height:60px; background:rgba(139,94,52,0.85); border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(0,0,0,0.4);">
+                                                <svg style="width:28px; height:28px; fill:white; transform:translateX(2px);" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                            </div>
+                                        </div>
+                                    </div>` :
                                     `<img src="${item.media}" alt="${item.title}" class="w-full h-56 object-cover">`
                                 }
                                 <span class="watermark">دهنات وديكور جيزان</span>
