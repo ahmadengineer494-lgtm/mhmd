@@ -314,7 +314,7 @@
             const modal = document.getElementById('lightbox-modal');
             const content = document.getElementById('lightbox-content');
             if (mediaType === 'video') {
-                content.innerHTML = `<div style="position:relative; display:inline-block; max-width:90vw; max-height:90vh;"><video src="${mediaUrl}" controls autoplay class="max-w-full max-h-[85vh] rounded-2xl"></video><span class="lightbox-watermark">دهنات وديكور جيزان</span></div>`;
+                content.innerHTML = `<div style="position:relative; display:inline-block; max-width:90vw; max-height:90vh;"><video src="${mediaUrl}" controls autoplay playsinline preload="auto" class="max-w-full max-h-[85vh] rounded-2xl"></video><span class="lightbox-watermark">دهنات وديكور جيزان</span></div>`;
             } else {
                 content.innerHTML = `<div style="position:relative; display:inline-block; max-width:90vw; max-height:90vh;"><img src="${mediaUrl}" class="max-w-full max-h-[85vh] object-contain rounded-2xl"><span class="lightbox-watermark">دهنات وديكور جيزان</span></div>`;
             }
